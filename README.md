@@ -20,9 +20,3 @@ Run_3D_Model.py:
 
 Model3DInput.nml:
     Namelist file that includes input parameters to the meltwater model. Includes descriptions of the parameters and filepaths.
-
-Surface_melt_Abl_Files:
-    Input meltwater files for the meltwater model.
-
-arctic_dem_trim.tif:
-    Input elevation model file for the meltwater model.

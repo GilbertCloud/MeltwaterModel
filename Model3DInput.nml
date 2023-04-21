@@ -1,0 +1,31 @@
+# Inputs:
+# filepath_to_DEM: filepath to DEM file
+# filepath_to_surf_melt: filepath to surface melt file folder with wildcard to search for 
+# filepath_to_output: filepath to folder where water layers will be stored
+# filepath_to_graphs: filepath to folder where graphs will be saved
+# profile: boolean of whether to run the cProfile or not
+# moulin: value in meters that sets the depth moulins are formed at; to disable moulins, set value below 0
+# threshold: value in meters that is maximum allowed difference of water levels between iterations
+# startdate: starting date for the model
+# enddate: ending date for the model
+# G3: boolean of whether to plot 3D graphs or not, start month, start day, start year, end month, end day, end month
+# G2: boolean of whether to plot 2D graphs or not, start month, start day, start year, end month, end day, end month
+# G2Z: boolean of whether to plot zoomed in 2D graphs or not, lower row index bound, higher row index bound, left column index bound, right column index bound, start month, start day, start year, end month, end day, end month
+# GS: boolean of whether to plot slice graphs or not, row of DEM, start month, start day, start year, end month, end day, end month
+# GSS: boolean of whether to plot sub-slice graphs or not, row of DEM, lower column index bound, upper column index bound, start month, start day, start year, end month, end day, end month
+&input_nml
+    filepath_to_DEM = '~/arctic_dem_trim.tif'
+    filepath_to_surf_melt = '~/Surface_melt_Abl_Files/*_surface_melt_3D.tif'
+    filepath_to_output = '~/3D_Flow_Variables(ModPDDAbl)/'
+    filepath_to_graphs = '~/3D_Flow_Graphs(ModPDDAbl)/'
+    profile = .false.
+    moulin = -1
+    threshold = 5
+    startdate = '20190501'
+    enddate = '20190831'
+    G3 = .false., 0, 0, 0, 0, 0, 0
+    G2 = .false., 5, 1, 2019, 5, 2, 2019
+    G2Z = .false., 3000, 4000, 0, 1000, 8, 30, 2019, 8, 31, 2019
+    GS = .false., 2500, 5, 1, 2019, 8, 31, 2019
+    GSS = .true., 3000, 500, 750, 5, 1, 2019, 8, 31, 2019
+/
